@@ -7,19 +7,96 @@
 ## 포함된 게임 목록
 
 ### 1. ShootingGame  
-- 스페이스바로 몬스터를 공격하는 슈팅 게임  
+- 스페이스바로 몬스터를 공격하는 슈팅 게임
+  
+ShootingGame/    
+├── src/  
+│ ├── game/  
+│ │ ├── HighScoreManager.java # 점수 저장/로드 관리  
+│ │ ├── ShootingGame.java # 메인 게임 로직  
+│ │ └── WavPlayer.java # BGM 및 효과음 플레이어  
+│ └── intro/  
+│ └── IntroFrame.java # 게임 시작 UI  
+│  
+├── shooting_data/  
+│ └── highscores.dat # 최고 점수 저장 데이터  
+│  
+├── images/ # 게임 이미지 리소스  
+│  
+└── Sounds/ # 게임 사운드 리소스  
 
 ### 2. SwipeBreakoutGame  
-- 마우스로 벽돌깨기 게임
-- 솔로,멀티용 구현
+- 마우스로 벽돌깨기 게임  
+- 솔로,멀티용 구현  
+SwipeBreakoutGame/     
+├── src/    
+│ ├── client/  
+│ │ ├── GameClient.java # 클라이언트(플레이어) 화면 UI  
+│ │ └── VersusFrame.java # 1:1 대전 모드 UI  
+│ │  
+│ ├── game/  
+│ │ ├── HighScoreManager.java # 최고 점수 저장/로드 관리  
+│ │ ├── SwipeBreakout.java # 메인 게임 로직  
+│ │ └── WavPlayer.java # 사운드 재생  
+│ │  
+│ ├── intro/  
+│ │ └── IntroFrame.java # 게임 시작 Intro 화면  
+│ │  
+│ └── server/  
+│ └── GameServer.java # 멀티플레이용 서버 코드  
+│  
+├── breakout_data/  
+│ └── highscores.dat # 벽돌깨기 최고 점수 데이터  
+│  
+├── images/ # 게임 이미지 리소스  
+│  
+└── Sounds/ # 게임 사운드 리소스  
+  
 
 ### 3. TypingGame  
-- 단어가 떨어지기 전에 타이핑해서 없애는 산성비 스타일 게임  
-- 멀티용
+- 단어가 떨어지기 전에 타이핑해서 없애는 산성비 스타일 게임    
+- 멀티용  
+TypingGame/    
+├── src/  
+│ ├── client/  
+│ │ └── TypingGameClient.java # 클라이언트 게임 화면 및 로직  
+│ │  
+│ ├── game/  
+│ │ ├── GameOverFrame.java # 게임 오버 결과 창  
+│ │ └── WavPlayer.java # 효과음/BGM 재생기  
+│ │  
+│ ├── intro/  
+│ │ └── IntroFrame.java # Intro / 시작 화면  
+│ │  
+│ └── server/  
+│ └── TypingGameServer.java # 서버: 단어 관리 + 멀티플레이 처리  
+│  
+├── images/ # 게임 이미지 리소스  
+│  
+├── Sounds/ # 사운드 리소스  
+│  
+└── words.txt # 떨어지는 단어 목록(txt 로딩)  
 
 ### 4. VolleyGame  
-- 피카츄 배구 느낌의 1:1 네트워크 대전 게임  
-- 멀티용 
-
+- 피카츄 배구 느낌의 1:1 네트워크 대전 게임    
+- 멀티용   
+VolleyGame/    
+├── src/  
+│ ├── client/  
+│ │ └── VolleyClient.java # 클라이언트(플레이어) 화면 및 로직  
+│ │  
+│ ├── game/  
+│ │ ├── VolleyPanel.java # 실제 배구 게임 판넬 / 게임 로직  
+│ │ └── WavPlayer.java # 효과음 & BGM 재생기  
+│ │  
+│ ├── intro/  
+│ │ └── IntroFrame.java # 시작 화면 / Intro UI  
+│ │  
+│ └── server/  
+│ └── VolleyServer.java # 네트워크 서버 (1:1 대전 처리)  
+│  
+├── images/ # 게임 이미지 리소스  
+│  
+└── sounds/ # 게임 사운드 리소스 (.wav 등)  
 ---
 
